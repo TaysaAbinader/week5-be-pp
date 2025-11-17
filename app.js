@@ -21,23 +21,20 @@ app.use("/api/tours", tourRouter);
 app.use("/api/users", userRouter);
 
 // Example route that throws an error
-app.get('/error', (req, res, next) => {
-  // Trigger an error
-  const error = new Error("Network problem");
-  next(error);
-});
-
-app.use(unknownEndpoint);
-app.use(errorHandler);
+// app.get('/error', (req, res, next) => {
+//   // Trigger an error
+//   const error = new Error("Network problem");
+//   next(error);
+// });
 
 
 const port = process.env.PORT || 4000;
 
 // Use the unknownEndpoint middleware for handling undefined routes
-app.use(unknownEndpoint);
+//app.use(unknownEndpoint);
 
 // Use the errorHandler middleware for handling errors
-app.use(errorHandler);
+//app.use(errorHandler);
 
 
 // Start the server
