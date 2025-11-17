@@ -33,8 +33,6 @@ app.use(errorHandler);
 
 const port = process.env.PORT || 4000;
 
-
-
 // Use the unknownEndpoint middleware for handling undefined routes
 app.use(unknownEndpoint);
 
